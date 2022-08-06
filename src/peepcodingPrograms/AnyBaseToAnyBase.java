@@ -13,6 +13,7 @@ public class AnyBaseToAnyBase {
 		int f = getBase(n,b1,b2);
 		System.out.println(f);
 	}
+        //function to getbase
 	public static int getBase(int n, int b1, int b2)
 	{
 		int rv=0;

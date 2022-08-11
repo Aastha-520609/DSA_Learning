@@ -11,15 +11,35 @@ public class LearnMap {
 		numbers.put("One", 1);
 		numbers.put("Two", 2);
 		//We cannot add same element in the key, if we do so it gets updated.
-		System.out.println(numbers);
-		//iterating through map 
+		//numbers.put("Two", 23); // if this is done then key value will change to 23, it will not remain 2 
+		System.out.print(numbers);
+		//if we want that the updation should not occur the we can do 
+		/*if(!numbers.containsKey("Two"))
+		{
+			numbers.put("Two", 23);
+		}*/
+		//In place of this we can also do
+		numbers.putIfAbsent("Two", 23);
+		System.out.print(numbers + "\n");
+		//iterating through map
 		for(Map.Entry<String, Integer> e:numbers.entrySet())
 		{
-			System.out.println(e);
-			System.out.println(e.getKey());
-			System.out.println(e.getValue());
+			System.out.println(e); // to get the entry (both key and value)
+			System.out.println(e.getKey()); // to get only the key
+			System.out.println(e.getValue()); // to get only the value
 		}
-		//used keyset while working with keys
+		// if we only want keys then 
+		System.out.println("Keys are: ");
+		for(String key: numbers.keySet())
+		{
+			System.out.println(key);
+		}
+		//if we only want to get the values
+		System.out.println("Values are: ");
+		for(Integer value: numbers.values())
+		{
+			System.out.println(value);
+		}
 		
 	}
 

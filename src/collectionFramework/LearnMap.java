@@ -40,6 +40,12 @@ public class LearnMap {
 		{
 			System.out.println(value);
 		}
+		//checks if particular value is present or not
+		System.out.println(numbers.containsValue(3));
+		//checks if map is empty or not
+		System.out.println(numbers.isEmpty());
+		//clear is used to clear the map
+		//System.out.println(numbers.clear());
 		
 	}
 

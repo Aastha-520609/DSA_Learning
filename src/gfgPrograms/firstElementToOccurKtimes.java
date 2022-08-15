@@ -12,17 +12,18 @@ public class firstElementToOccurKtimes {
 			int count = 0;
 			if(firstElem.get(arr[i]) != null)
 			{
-				count = firstElem.get(arr[i]);
-				//System.out.print(firstElem.get(arr[i]));
+			    count = firstElem.get(arr[i]);
+				//System.out.println(firstElem.get(arr[i]));
 			}
-			//firstElem.put(arr[i],count + 1);
-			System.out.print(firstElem.put(arr[i],count + 1));
+			 firstElem.put(arr[i],count + 1);
+			//System.out.println(firstElem.put(arr[i],count + 1));
 		}
+		
 		for(int i=0; i<n; i++)
 		{
-			if(firstElem.get(arr[i]) == k)
+			if( firstElem.get(arr[i]) == k)
 			{
-				System.out.print(arr[i]);
+				System.out.println(arr[i]);
 				//return arr[i];
 			}
 		}
@@ -33,8 +34,8 @@ public class firstElementToOccurKtimes {
 		int arr[] = {1, 7, 4, 3, 4, 8, 7};
 		int n = arr.length;
 		int k = 2;
-		//firstElement(arr,n,k);
-		System.out.print(firstElement(arr,n,k));
+		firstElement(arr,n,k);
+		//System.out.print(firstElement(arr,n,k));
 	}
 
 }

@@ -18,7 +18,7 @@ public class LearnSet {
 		System.out.println(set);
 		set.remove(80);
 		System.out.println(set);
-		System.out.println(set.contains(100));
+		System.out.println(!set.contains(100));
 		//is empty checks if the set is empty or not
 		System.out.println(set.isEmpty());
 		//set.clear();

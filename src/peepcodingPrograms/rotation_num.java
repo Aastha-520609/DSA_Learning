@@ -1,3 +1,5 @@
+package peepcodingPrograms;
+
 import java.util.Scanner;
 public class rotation_num {
 	public static void main(String[] args)

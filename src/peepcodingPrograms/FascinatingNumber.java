@@ -1,3 +1,5 @@
+package peepcodingPrograms;
+
 import java.util.*;
 public class FascinatingNumber {
 	public static void main(String[] args)

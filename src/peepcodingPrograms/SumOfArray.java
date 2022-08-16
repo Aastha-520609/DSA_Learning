@@ -1,3 +1,5 @@
+package peepcodingPrograms;
+
 import java.util.Scanner;
 public class SumOfArray {
 	public static void main(String[] args)

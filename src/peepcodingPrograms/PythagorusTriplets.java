@@ -1,3 +1,5 @@
+package peepcodingPrograms;
+
 import java.util.Scanner;
 public class PythagorusTriplets {
 	public static void main(String[] args)

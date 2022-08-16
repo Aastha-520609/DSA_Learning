@@ -1,5 +1,8 @@
+package peepcodingPrograms;
+
 import java.io.*;
 import java.util.*;
+import java.util.Stack;
 public class NextGreaterElement {
 	public static void display(int[] a)
 	{

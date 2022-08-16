@@ -1,5 +1,8 @@
+package peepcodingPrograms;
+
 import java.io.*;
 import java.util.*;
+import java.util.Stack;
 public class SlidingWindowMaximum {	
 	public static void main(String[] args)throws Exception
 		{

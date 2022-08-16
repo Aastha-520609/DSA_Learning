@@ -1,5 +1,7 @@
+package peepcodingPrograms;
 import java.io.*;
 import java.util.*;
+import java.util.Stack;
 public class DuplicateBrackets {
 	public static void main(String[] args)
 	{

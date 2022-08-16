@@ -1,3 +1,5 @@
+package peepcodingPrograms;
+
 import java.util.Scanner;
 public class Digital_Frequency {
 	public static void main(String[] args)

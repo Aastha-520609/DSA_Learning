@@ -1,5 +1,8 @@
+package peepcodingPrograms;
+
 import java.io.*;
 import java.util.*;
+import java.util.Stack;
 public class miscellinous {
 	public static void main(String[] args) throws Exception {
 	    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -80,4 +83,3 @@ public class miscellinous {
 	  }
 	}
 
-}

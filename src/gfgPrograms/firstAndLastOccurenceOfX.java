@@ -28,6 +28,6 @@ public class firstAndLastOccurenceOfX {
 	    	int n = 4;
 	    	int x = 3;
 	    	ArrayList<Integer> ans = firstAndLast(arr,n,x);
-	    	System.out.println(ans);
+	    	System.out.println(ans);	
 	    }
 }

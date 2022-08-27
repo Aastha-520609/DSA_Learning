@@ -8,66 +8,41 @@ the remaining balls is to be printed.
 First line will be the number of Balls N. Second Line will be the numbers written on Balls.
 Sample Input 1: 5 4 3 1 3 6
 Output should be the numbers on the Remaining Balls after the Blast
-Sample Output 1: 4 1 3 6*/
-/*int main()
+Sample Output 1: 4 1 3 6
+Sample Input 2: 6 7 4 5 3 1 4
+Sample Output 2: 7 4 3 1 4
+Sample Input 3: 4 2 5 3 4
+Sample Output 3: 2 5 3 4 */
+int main()
 {
   int N;
   cin>>N;
-  int array[N];
+  int array[20];
   for(int i=0; i<N; i++)
   {
     cin>>array[i];	
   }
   int count=0;
-  for(int i=0; i<N; i++)
+  for(int j=0; j<N; j++)
   {
-  	for(int j=0; j<N; j++)
-  	{
-  			if(array[i] %2 != 0 && array[i+1] %2 != 0 && array[i+2] %2 !=0)
-  	{
-  	  for(int k=i; k<N; k++)
-		{
+  	for(int i=0; i<N; i++)
+  {
+  	if(array[i] %2 != 0 && array[i+1] %2 != 0 && array[i+2] %2 !=0)
+  	 {
+  	   for(int k=i; k<N; k++)
+		 {
+		 	//Shifting elements
+		   array[k] = array[k+1];
+		 }	
 		 count= count + 1;	
-		}	
-	}
-  		
-    }
+	 }
+  }	
   }
-  for (int i = 0; i < N-count; i++)
+  for (int j = 0;  j<N-count; j++)
   {
-  	cout<<array[i]<<" ";
+  	cout<<array[j]<<" ";
   }
   
-}*/
-int main()
-{
-int a[20], n, count = 0;
-cin >> n;
-for (int i = 0; i < n; i++)
-{
-cin >> a[i];
 }
 
-for (int i = 0; i < n; i++)
-{
-for (int j = 0; j < n; j++)
-{
 
-if (a[j] % 2 != 0 && a[j + 1] % 2 != 0 && a[j + 2] % 2 != 0)
-{
-for (int k = j; k < n; k++)
-{
-a[k] = a[k + 1];
-}
-count += 1;
-}
-}
-}
-
-for (int i = 0; i < n - count; i++)
-{
-cout << a[i] << " ";
-}
-
-return 0;
-}

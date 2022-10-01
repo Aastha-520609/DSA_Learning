@@ -50,6 +50,30 @@ public class deletion_SLL {
 		}
 		secondlast.next = null;
 	}
+	public void deleteAtPos(int position)
+	{
+		if(head == null)
+		{
+			return;
+		}
+		
+		Node temp = head;
+		if(position == 0)
+		{
+			head = temp.next;
+			return;
+		}
+		for(int i=0; i<position - 1 && temp != null; i++)
+		{
+			temp = temp.next;
+		}
+		Node link = temp.next.next;
+		temp.next = link;
+		if(temp == null && temp.next == null)
+		{
+			return;
+		}
+	}
 	public static void main(String[] args)
 	{
 		deletion_SLL l = new deletion_SLL();
@@ -63,8 +87,10 @@ public class deletion_SLL {
 		second.next = third;
 		third.next = fourth;
 	    
-		l.deleteAtFirst();
-		l.deleteAtLast();
+		//l.deleteAtFirst();
+		//l.deleteAtLast();
+		l.deleteAtPos(2);
+		
 		l.printList();	
 	}
 }

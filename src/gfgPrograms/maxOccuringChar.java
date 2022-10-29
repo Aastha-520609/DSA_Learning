@@ -4,6 +4,8 @@ public class maxOccuringChar {
 	public static char getMaxOccuringChar(String line)
     {
         // Your code here
+		//char[] ch = line.toCharArray();
+		//Arrays.sort(ch);
         HashMap<Character,Integer> hmap = new HashMap<>();
         for(int i=0; i<line.length(); i++)
         {

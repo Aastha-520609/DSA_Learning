@@ -27,8 +27,6 @@ public class arraySubsetOfAnotherArray {
 		long a2[] = {11, 3, 7, 1};
 		long n = 6;
 		long m = 4;
-		System.out.print(isSubset(a1,a2,n,m));
-		
+		System.out.print(isSubset(a1,a2,n,m));	
 	}
-
 }

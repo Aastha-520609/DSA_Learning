@@ -3,8 +3,8 @@ import java.util.*;
 public class countPairsWithGivenSum {
 	 public static int getPairsCount(int[] arr, int n, int k) {
 	        // code here
-	        HashMap<Integer,Integer> hmap = new HashMap<>();
-	        int count = 0;
+		        HashMap<Integer,Integer> hmap = new HashMap<>();
+		        int count = 0;
 	        for(int i=0; i<n; i++)
 	        {
 	            int ele1 = arr[i];

@@ -1,5 +1,4 @@
 package peepcodingPrograms;
-
 import java.util.Scanner;
 public class DifferenceOfArray {
 	public static void main(String[] args)
@@ -33,39 +32,42 @@ public class DifferenceOfArray {
 		while(k >= 0)
 		{
 			int d = 0;
-			int arr1v = i >= 0? arr1[i]: 0;
-			
-			if(arr2[j] + c >= arr1v)
+			//if we get arr2 size more than arr1, so inorder to make calculation accurate we will add 0 before the arr1 values.
+			int arr1v = i>=0 ?arr1[i] : 0;
+			if(arr2[j]+c >= arr1v)
 			{
 				d = arr2[j] + c - arr1v;
-				c = 0;
 			}
 			else
 			{
-				d = arr2[j] + c + 10 - arr1v;
+				d = arr2[j] +c +10 - arr1v;
 				c = -1;
 			}
 			
 			difference[k] = d;
-			
 			i--;
 			j--;
 			k--;
 		}
 		int idx = 0;
+		//checking whether 0 is in starting of the number or not
 		while(idx < difference.length)
 		{
+			//if 0 is there then increase the index of the difference 
 			if(difference[idx] == 0)
 			{
 				idx++;
 			}
-			else {
+			//if no then break from the same position and print the remaining number
+			else
+			{
 				break;
 			}
 		}
+		//printing the remaining numbers except 0 at the front
 		while(idx < difference.length)
 		{
-			System.out.print(difference[idx]);
+			System.out.print(difference[idx] + " ");
 			idx++;
 		}
 	}

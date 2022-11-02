@@ -33,36 +33,34 @@ public class SumOfArray {
 		while(k>=0)
 		{
 			int d = c;
-			
 			if(i>=0)
 			{
 				d = d + arr1[i];
 			}
-			
 			if(j>=0)
 			{
 				d = d + arr2[j];
 			}
 			
-			c = d / 10;
+			c=d/10;
 			d = d % 10;
 			
+			//adding the digit in array
 			sum[k] = d;
 			
 			i--;
 			j--;
 			k--;
 		}
-			
-			if(c != 0)
-			{
-				System.out.print(c);
-			}
-			
-			for(int val:sum)
-			{
-				System.out.print(val);
-			}
+		
+		if(c!=0)
+		{
+			System.out.print(c);
+		}
+		
+		for(int val: sum)
+		{
+			System.out.print(val);
+		}
 	}
-
 }

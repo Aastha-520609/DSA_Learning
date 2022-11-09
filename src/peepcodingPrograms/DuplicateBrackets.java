@@ -3,12 +3,8 @@ import java.io.*;
 import java.util.*;
 import java.util.Stack;
 public class DuplicateBrackets {
-	public static void main(String[] args)
+	public static boolean duplicateBracket(String str)
 	{
-		Scanner sc = new Scanner (System.in);
-		System.out.println("Enter any String: ");
-		String str = sc.nextLine();
-		
 		//Declaration of stack
 		Stack<Character> st = new Stack<>();
 		for(int i = 0;i < str.length();i++)
@@ -18,8 +14,8 @@ public class DuplicateBrackets {
 			{
 				if(st.peek() == '(')
 				{
-					System.out.println(true);
-					return;
+					//System.out.println(true);
+					return true;
 				}
 				else
 				{
@@ -35,7 +31,12 @@ public class DuplicateBrackets {
 				st.push(ch);
 			}
 		}
-		System.out.println(false);
+		//System.out.println(false);
+		return false;
 	}
-
+	public static void main(String[] args)
+	{
+		String str = "(a+b)+((c+d))";
+		System.out.print(duplicateBracket(str));
+	}
 }

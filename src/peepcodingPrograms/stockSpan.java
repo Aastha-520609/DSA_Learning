@@ -39,6 +39,7 @@ public class stockSpan {
 		
 		for(int i=1; i< arr.length;i++)
 		{
+			//left greatest ele
 			while(st.size() > 0 && arr[i] > arr[st.peek()])
 			{
 				st.pop();

@@ -6,6 +6,7 @@ import java.util.Stack;
 public class SlidingWindowMaximum {	
 	public static void main(String[] args)throws Exception
 		{
+		    //Taking input the size and element of array
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			int n = Integer.parseInt(br.readLine());
 			int[] arr = new int[n];
@@ -13,10 +14,11 @@ public class SlidingWindowMaximum {
 			{
 				arr[i] = Integer.parseInt(br.readLine());
 			}
+			//Taking input the size of window
 			System.out.println("Enter the value of k: ");
 			int k = Integer.parseInt(br.readLine());
 			
-			
+			//Finding next greater element
 			Stack<Integer> st = new Stack <> ();
 			int[] nge = new int[arr.length];
 			

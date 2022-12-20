@@ -72,7 +72,7 @@ public class InfixConversion {
  				 
 	 }
 	
-		//function to show which operator has greater element
+	//function to show which operator has greater element
 	public static int precedence(char operator)
 		{
 			if(operator == '+' || operator == '-')

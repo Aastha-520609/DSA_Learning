@@ -17,7 +17,7 @@ public class PostfixEvaluation {
 			
 		   if (Character.isDigit(ch))
 			{
-			  postfix.push(ch - '0');
+			  postfix.push(ch - '0');//converting into integer
 			}
 			else if( ch == '+' || ch == '-' || ch == '*' || ch == '/')
 			{		

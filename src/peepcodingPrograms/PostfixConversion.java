@@ -19,6 +19,7 @@ public class PostfixConversion {
 			
 			if(ch == '+' || ch == '-' || ch == '*' || ch =='/')
 			{
+				//poping and pushing into stack
 				String v2 = prefix.pop();
 				String v1 = prefix.pop();
 				String prefix_value = ch + v1 + v2 ;
@@ -31,7 +32,8 @@ public class PostfixConversion {
 			}
 			else
 			{
-				prefix.push(ch + "");
+				//pushing to stack 
+				prefix.push(ch + "");//converting into string.
 				infix.push(ch + "");
 			}
 		}

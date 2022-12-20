@@ -18,12 +18,13 @@ public class PrefixEvaluation {
 			char ch = exp.charAt(i);
 			if(ch == '+' || ch == '-' || ch == '*' || ch == '/')
 			{
+				//This is for evaluation.
 				int v1 = prefix.pop();
 				int v2 = prefix.pop();
 				
 				int operator_value = operation(v1,v2,ch);
 				prefix.push(operator_value);
-				
+				//This is for conversion.
 				String i_v1 = infix.pop();
 				String i_v2 = infix.pop();
 				String i_v = "(" + i_v1 + ch + i_v2 + ")";
@@ -36,8 +37,8 @@ public class PrefixEvaluation {
 			}
 			else
 			{
-				prefix.push(ch - '0');
-				infix.push(ch + "");
+				prefix.push(ch - '0');//evaluation
+				infix.push(ch + "");//conversion
 				postfix.push(ch + "");
 			}
 		}

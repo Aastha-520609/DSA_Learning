@@ -17,16 +17,16 @@ public class getSubSequence {
     		bres.add("");
     		return bres;
     	}
-    	char ch = str.charAt(0);
-    	String ros = str.substring(1);
-    	ArrayList<String> rres = gss(ros);
+    	char ch = str.charAt(0); // a
+    	String rem_ch = str.substring(1); //bc
+    	ArrayList<String> recursion_result = gss(rem_ch); // have faith that this will provide --,-c,b-,bc
     	
-    	ArrayList<String> mres = new ArrayList<>();
-    	for(String rstr: rres)
+    	ArrayList<String> my_res = new ArrayList<>();
+    	for(String recursion_str: recursion_result)
     	{
-    		mres.add(""+ rstr);
-    		mres.add(ch+ rstr);
+    		my_res.add(""+ recursion_str); 
+    		my_res.add(ch+ recursion_str);
     	}
-    	return mres;
+    	return my_res;
     }
 }

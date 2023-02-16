@@ -21,21 +21,21 @@ public class getKeypadCombination {
 			return bres;
 		}
 		char ch = str.charAt(0); // 6
-		String ros = str.substring(1); // 78
+		String rem_str = str.substring(1); // 78
 		
-		ArrayList<String> rres = getKPC(ros); // 6 words of 78
-		ArrayList<String> mres = new ArrayList<>();
+		ArrayList<String> recursion_res = getKPC(rem_str); // 6 words of 78
+		ArrayList<String> my_res = new ArrayList<>();
 		
 		String codeforch = codes[ch - '0']; // taking value of 6 index
 		for(int i=0; i<codeforch.length(); i++) //pqrs
  		{
 			char chcode = codeforch.charAt(i);
-			for(String rstr: rres)
+			for(String rstr: recursion_res)
 			{
-				mres.add(chcode + rstr);
+				my_res.add(chcode + rstr);
 			}
 		}
-		return mres;
+		return my_res;
 	}
 
 }

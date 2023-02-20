@@ -11,36 +11,36 @@ public class mazePath {
 	  ArrayList<String> paths = getMazePaths(1,1,n,m);
 	  System.out.println(paths);
 	}
-	public static ArrayList<String> getMazePaths(int sr, int sc, int dr, int dc)
+	public static ArrayList<String> getMazePaths(int sourceRow, int sourceColumn, int destinationRow, int destinationColumn)
 	{
-		if(sr == dr && sc == dc)
+		if(sourceRow == destinationRow && sourceColumn == destinationColumn)
 		{
-			ArrayList<String> bres = new ArrayList<>();
-			bres.add("");
-			return bres;
+			ArrayList<String> blankWay = new ArrayList<>();
+			blankWay.add("");
+			return blankWay;
 		}
-		ArrayList<String> vpaths = new ArrayList<>();
-		ArrayList<String> hpaths = new ArrayList<>();
+		ArrayList<String> vpaths = new ArrayList<>(); //verticalPaths
+		ArrayList<String> hpaths = new ArrayList<>(); //horizontalPaths
 		
-		if(sc < dc)
+		if(sourceColumn < destinationColumn)
 		{
-			hpaths = getMazePaths(sr, sc+1, dr, dc);
+			hpaths = getMazePaths(sourceRow, sourceColumn+1, destinationRow, destinationColumn);
 		}
 		
-		if(sr < dr)
+		if(sourceRow < destinationRow)
 		{
-			vpaths = getMazePaths(sr+1, sc, dr, dc);
+			vpaths = getMazePaths(sourceRow+1, sourceColumn, destinationRow, destinationColumn);
 		}
 		
 		ArrayList<String> paths = new ArrayList<>();
-		for(String hpath : hpaths)
+		for(String horizontalPath : hpaths)
 		{
-			paths.add( "h" + hpath);
+			paths.add( "h" + horizontalPath);
 		}
 		
-		for(String vpath : vpaths)
+		for(String verticalPath : vpaths)
 		{
-			paths.add("v" + vpath);
+			paths.add("v" + verticalPath);
 		}
 		return paths;
 	}

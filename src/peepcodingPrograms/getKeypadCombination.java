@@ -16,15 +16,15 @@ public class getKeypadCombination {
 	{
 		if(str.length() == 0)
 		{
-			ArrayList<String> bres = new ArrayList<>();
-			bres.add("");
-			return bres;
+			ArrayList<String> blankWay= new ArrayList<>();
+			blankWay.add("");
+			return blankWay;
 		}
 		char ch = str.charAt(0); // 6
 		String rem_str = str.substring(1); // 78
 		
 		ArrayList<String> recursion_res = getKPC(rem_str); // 6 words of 78
-		ArrayList<String> my_res = new ArrayList<>();
+		ArrayList<String> result = new ArrayList<>();
 		
 		String codeforch = codes[ch - '0']; // taking value of 6 index
 		for(int i=0; i<codeforch.length(); i++) //pqrs
@@ -32,10 +32,10 @@ public class getKeypadCombination {
 			char chcode = codeforch.charAt(i);
 			for(String rstr: recursion_res)
 			{
-				my_res.add(chcode + rstr);
+				result .add(chcode + rstr);
 			}
 		}
-		return my_res;
+		return result ;
 	}
 
 }

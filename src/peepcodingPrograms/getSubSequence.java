@@ -13,20 +13,20 @@ public class getSubSequence {
     {
     	if(str.length() == 0)
     	{
-    		ArrayList<String> bres = new ArrayList<>();
-    		bres.add("");
-    		return bres;
+    		ArrayList<String> blankWay = new ArrayList<>();
+    		blankWay.add("");
+    		return blankWay;
     	}
     	char ch = str.charAt(0); // a
     	String rem_ch = str.substring(1); //bc
     	ArrayList<String> recursion_result = gss(rem_ch); // have faith that this will provide --,-c,b-,bc
     	
-    	ArrayList<String> my_res = new ArrayList<>();
+    	ArrayList<String> result  = new ArrayList<>();
     	for(String recursion_str: recursion_result)
     	{
-    		my_res.add(""+ recursion_str); 
-    		my_res.add(ch+ recursion_str);
+    		result.add(""+ recursion_str); 
+    		result.add(ch+ recursion_str);
     	}
-    	return my_res;
+    	return result;
     }
 }

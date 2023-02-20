@@ -13,14 +13,14 @@ public class getPaths {
     {
     	if(n == 0)
     	{
-    		ArrayList<String> bres = new ArrayList<>();
-    		bres.add(" ");
-    		return bres;
+    		ArrayList<String> blankWay = new ArrayList<>();
+    		blankWay.add(" "); //There is a way which is you stay at the end point, don't move, don't walk just stay there, staying there is your blankway.
+    		return blankWay; //The concept is if there is no path left to walk on, stay there.
     	}
     	else if(n < 0)
     	{
-    		ArrayList<String> bres = new ArrayList<>();
-    		return bres;
+    		ArrayList<String> blankWay = new ArrayList<>();
+    		return blankWay;
     	}
     	ArrayList<String> paths1 = getStairPaths(n-1);
     	ArrayList<String> paths2 = getStairPaths(n-2);

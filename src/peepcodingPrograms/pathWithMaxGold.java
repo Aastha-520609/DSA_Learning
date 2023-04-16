@@ -14,7 +14,7 @@ public class pathWithMaxGold {
 		{
 			for(int j=0; j<givenArray[0].length; j++)
 			{
-				givenArray[n][m] = sc.nextInt();
+				givenArray[i][j] = sc.nextInt();
 			}
 		}
 		
@@ -41,8 +41,7 @@ public class pathWithMaxGold {
 			   }
 			   else // it compares with three values
 			   {
-				   calculatedCostArray[i][j] = givenArray[i][j] + Math.max(calculatedCostArray[i][j+1], Math.max(calculatedCostArray[i-1][j+1] , 
-						   calculatedCostArray[i+1][j+1])); 
+				   calculatedCostArray[i][j] = givenArray[i][j] + Math.max(calculatedCostArray[i][j+1], Math.max(calculatedCostArray[i+1][j+1] ,calculatedCostArray[i-1][j+1])); 
 			   }
 		   }
 	   }
@@ -58,5 +57,4 @@ public class pathWithMaxGold {
 	   
 	   System.out.println(max);
 	}
-
 }

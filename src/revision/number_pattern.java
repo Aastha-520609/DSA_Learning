@@ -16,7 +16,7 @@ public class number_pattern {
 			System.out.println();
 		}*/
 		
-		int n = 5;
+		/*int n = 5;
 		int num = 1;
 		
 		for(int i=n; i>=0; i--)
@@ -26,6 +26,40 @@ public class number_pattern {
 				System.out.print(num + "\t");
 				num++;
 			}
+			System.out.println();
+		}*/
+		
+		int n = 4;
+		int star = 1;
+		int space = 2*n - 3;
+		for(int i=1; i<=n; i++)
+		{
+			int val = 1;
+			for(int j=1; j<=star; j++)
+			{
+				System.out.print( val + "\t");
+				val++;
+			}
+			
+			for(int j=1; j<=space; j++)
+			{
+				System.out.print("\t");
+			}
+			
+			if(i == n)
+			{
+				star--;
+				val--;
+			}
+			
+			for(int j=1; j<=star; j++)
+			{
+				val--;
+				System.out.print(val + "\t");
+			}
+			
+			star++;
+			space = space - 2;
 			System.out.println();
 		}
 	}

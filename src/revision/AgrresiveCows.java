@@ -48,5 +48,4 @@ public class AgrresiveCows {
 		int k = 4;
 		System.out.println(aggressiveCows(stalls, k));
 	}
-
 }

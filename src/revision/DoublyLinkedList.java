@@ -202,6 +202,29 @@ public class DoublyLinkedList {
 		return;	
 	}
 	
+	public static newNode reverse(newNode head)
+	{
+		if(head == null || head.next == null)
+		{
+			return head;
+		}
+		
+		newNode temp = head;
+		newNode previous = null;
+		
+		while(temp != null)
+		{
+			previous = temp.back;
+			
+			temp.back = temp.next;
+			temp.next = previous;
+			
+			temp = temp.back;
+		}
+		
+		return previous.back;
+	}
+	
 	public static void main(String args[])
 	{
 		int[] arr = {12,8,7,6};
@@ -236,6 +259,10 @@ public class DoublyLinkedList {
 		
 		System.out.println("List after insertion before given element: ");
 		insertBeforeEle(head.next, 20);
+		traverse(head);
+		
+		System.out.println("List after reverse: ");
+		head = reverse(head);
 		traverse(head);
 	}
 }

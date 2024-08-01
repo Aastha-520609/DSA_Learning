@@ -54,5 +54,4 @@ public class Partition {
 		int[] arr = {1,5,11,5};
 		System.out.println(canPartition(arr));
 	}
-
 }
